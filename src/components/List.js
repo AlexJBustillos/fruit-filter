@@ -6,10 +6,13 @@ class List extends Component {
         this.state = {};
     }
     render() {
+        const fruitItems = this.props.fruits.map((eachFruit, index) => {
+            return <li>{eachFruit}</li>
+        })
         return(
             <div>
                 <ul>
-                    {/* List will go here*/}
+                    {fruitItems}
                 </ul>
             </div>
         )
