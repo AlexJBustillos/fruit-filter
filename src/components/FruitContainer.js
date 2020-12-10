@@ -6,7 +6,7 @@ class FruitContainer extends Component {
     constructor(props) {
         super()
         this.state = {
-            fruitsToDisplay: this.props.fruits,
+            fruitsToDisplay: props.fruits,
             filterValue: ''
         };
     }
@@ -27,6 +27,10 @@ class FruitContainer extends Component {
     render() {
         // Inside of Input Component, to access props, I will say props.value
         // Inside of List Component, to access props, I will say props.fruits
+        console.log('------state------');
+        console.log(this.state.fruitsToDisplay);
+        console.log('--------props-------');
+        console.log(this.props.fruits);
         return(
             <div>
                 <Input value={this.state.filterValue} onChange={this.handleFilterChange}/>
